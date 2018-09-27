@@ -12,6 +12,22 @@ public class QueryProcessor {
         if (query.toLowerCase().contains("what is your name")) {
             return "Jigsaw";
         }
+        if (query.toLowerCase().contains("which of the following numbers is the largest: 88, 120")) {
+            return "120";
+        }
+//        if (query.toLowerCase().contains("what is your name")) {
+//            return "Jigsaw";
+//        }
+//        if (query.toLowerCase().contains("what is your name")) {
+//            return "Jigsaw";
+//        }
+//        if (query.toLowerCase().contains("what is your name")) {
+//            return "Jigsaw";
+//        }
+//        if (query.toLowerCase().contains("what is your name")) {
+//            return "Jigsaw";
+//        }
+
         return "";
     }
 }

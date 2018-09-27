@@ -26,7 +26,27 @@ public class QueryProcessorTest {
     }
 
     @Test
+    public void LargerNumber() throws Exception {
+        assertThat(queryProcessor.process("which of the following numbers is the largest: 88, 120"), containsString("120"));
+    }
+
+    @Test
     public void whatIsYourName() throws Exception {
         assertThat(queryProcessor.process("what is your name"), containsString("Jigsaw"));
     }
+//
+//    @Test
+//    public void b() throws Exception {
+//        assertThat(queryProcessor.process("what is your name"), containsString("Jigsaw"));
+//    }
+//
+//    @Test
+//    public void c() throws Exception {
+//        assertThat(queryProcessor.process("what is your name"), containsString("Jigsaw"));
+//    }
+//
+//    @Test
+//    public void d() throws Exception {
+//        assertThat(queryProcessor.process("what is your name"), containsString("Jigsaw"));
+//    }
 }
