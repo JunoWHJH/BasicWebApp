@@ -1,5 +1,6 @@
 package com.develogical;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -69,7 +70,6 @@ public class QueryProcessor {
                 int number = Integer.valueOf(s);
                 double sqrt = Math.sqrt(number);
                 double cbrt = Math.cbrt(number);
-//                int x = (int) sqrt;
                 if(Math.pow((int) sqrt,2) == number) {
                     if(Math.pow((int)cbrt,3) == number) {
                         return Integer.toString(number);
@@ -78,6 +78,27 @@ public class QueryProcessor {
             }
             return "";
 
+        }
+
+        if (query.toLowerCase().contains("are primes")) {
+            query = query.substring(query.lastIndexOf(":") + 2);
+            List<String> list = Arrays.asList(query.split(", "));
+            List<String> output = new ArrayList<>();
+            for (String s : list) {
+                boolean isPrime = true;
+                int number = Integer.valueOf(s);
+                for (int divisor = 2; divisor <= number / 2; divisor++) {
+                    if (number % divisor == 0) {
+                        isPrime = false;
+                        break; // num is not a prime, no reason to continue checking
+                    }
+                }
+                if(isPrime) {
+                    output.add(Integer.toString(number));
+                }
+
+            }
+            return output.toString();
         }
 
         return "";

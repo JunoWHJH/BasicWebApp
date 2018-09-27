@@ -60,8 +60,12 @@ public class QueryProcessorTest {
     public void mayElectionYear() throws Exception {
         assertThat(queryProcessor.process("8d1392a0: which year was Theresa May first elected as the Prime Minister of Great Britain"), containsString("2016"));
     }
-    
 
-    
+    @Test
+    public void prime() throws Exception {
+        assertThat(queryProcessor.process("ef884590: which of the following numbers are primes: 92, 127, 53, 579, 3"), containsString("127, 53, 3"));
+    }
+
+
 
 }
