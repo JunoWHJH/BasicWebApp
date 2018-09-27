@@ -5,7 +5,6 @@ script: mvn clean verify
 
 deploy:
   provider: heroku
-  api_key: "9ff8d3ea-3e4f-4f87-9d73-4d37b7baffab"
-#    secure: "9ff8d3ea-3e4f-4f87-9d73-4d37b7baffab"
+  api_key: "955063e1-69a7-4453-ad91-6fafa4713fb2"
   app:
     nameless-hamlet-92047
