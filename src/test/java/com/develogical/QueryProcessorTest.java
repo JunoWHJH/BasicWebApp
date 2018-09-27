@@ -55,7 +55,13 @@ public class QueryProcessorTest {
     public void squareAndCube() throws Exception {
         assertThat(queryProcessor.process("3f9dc420: which of the following numbers is both a square and a cube: 128, 729"), containsString("729"));
     }
+
+    @Test
+    public void mayElectionYear() throws Exception {
+        assertThat(queryProcessor.process("8d1392a0: which year was Theresa May first elected as the Prime Minister of Great Britain"), containsString("2016"));
+    }
     
+
     
 
 }
