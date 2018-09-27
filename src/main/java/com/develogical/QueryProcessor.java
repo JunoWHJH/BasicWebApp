@@ -16,7 +16,7 @@ public class QueryProcessor {
             return "Jigsaw";
         }
         if (query.toLowerCase().contains("which of the following numbers is the largest")) {
-            query = query.substring(query.indexOf(":")+2);
+            query = query.substring(query.lastIndexOf(":")+2);
             List<String> list = Arrays.asList(query.split(", "));
             int max = 0;
             for(String s: list) {
