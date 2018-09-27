@@ -21,6 +21,10 @@ public class QueryProcessor {
             return "Paris";
         }
 
+        if (query.toLowerCase().contains("james bond")) {
+            return "Sean Connery";
+        }
+
         if (query.toLowerCase().contains("what is your name")) {
             return "Jigsaw";
         }
