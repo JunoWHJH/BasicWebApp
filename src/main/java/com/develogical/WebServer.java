@@ -53,7 +53,7 @@ public class WebServer {
 
   public static void main(String[] args) throws Exception {
     new WebServer();
-    System.out.println("Test!");
+    System.out.println("Test");
   }
 
 }
