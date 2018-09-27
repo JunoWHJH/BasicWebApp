@@ -58,6 +58,24 @@ public class QueryProcessor {
             return Integer.toString(total);
         }
 
+        if (query.toLowerCase().contains("both a square and a cube")) {
+            query = query.substring(query.lastIndexOf(":")+2);
+            List<String> list = Arrays.asList(query.split(", "));
+            for(String s: list) {
+                int number = Integer.valueOf(s);
+                double sqrt = Math.sqrt(number);
+                double cbrt = Math.cbrt(number);
+//                int x = (int) sqrt;
+                if(Math.pow((int) sqrt,2) == number) {
+                    if(Math.pow((int)cbrt,3) == number) {
+                        return Integer.toString(number);
+                    }
+                }
+            }
+            return "";
+
+        }
+
         return "";
     }
 }

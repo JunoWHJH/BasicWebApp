@@ -51,4 +51,11 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("ef478990: what is 8 multiplied by 2"), containsString("16"));
     }
 
+    @Test
+    public void squareAndCube() throws Exception {
+        assertThat(queryProcessor.process("3f9dc420: which of the following numbers is both a square and a cube: 128, 729"), containsString("729"));
+    }
+    
+    
+
 }
