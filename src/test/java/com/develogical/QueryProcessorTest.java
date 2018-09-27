@@ -71,6 +71,11 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("fa5384e0: which city is the Eiffel tower in"), containsString("Paris"));
     }
 
+    @Test
+    public void minus() throws Exception {
+        assertThat(queryProcessor.process("c571fe50: what is 10 minus 18"), containsString("-8"));
+    }
+
 
 
 
