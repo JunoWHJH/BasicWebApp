@@ -43,6 +43,21 @@ public class QueryProcessor {
             return Integer.toString(total);
         }
 
+        if (query.toLowerCase().contains("multiplied")) {
+            query = query.substring(query.indexOf(":"));
+            int total = 1;
+            String numsplit = query.replaceAll("[^0-9]+", ";");
+            numsplit=numsplit.substring(1);
+            String[] array  = numsplit.split(";");
+
+
+            for(String s: array) {
+                int number = Integer.valueOf(s);
+                total *= number;
+            }
+            return Integer.toString(total);
+        }
+
         return "";
     }
 }

@@ -46,4 +46,9 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("ef478990: what is 6 plus 12"), containsString("18"));
     }
 
+    @Test
+    public void multiply() throws Exception {
+        assertThat(queryProcessor.process("ef478990: what is 8 multiplied by 2"), containsString("16"));
+    }
+
 }
