@@ -82,15 +82,15 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("0710ed30: who played James Bond in the film Dr No"), containsString("Sean Connery"));
     }
 
-    @Test
-    public void power() throws Exception {
-        assertThat(queryProcessor.process("6fe1a660: what is 15 to the power of 0"), containsString("1"));
-    }
-
-    @Test
-    public void power2() throws Exception {
-        assertThat(queryProcessor.process("6fe1a660: what is 15 to the power of 2"), containsString("225"));
-    }
+//    @Test
+//    public void power() throws Exception {
+//        assertThat(queryProcessor.process("6fe1a660: what is 15 to the power of 0"), containsString("1"));
+//    }
+//
+//    @Test
+//    public void power2() throws Exception {
+//        assertThat(queryProcessor.process("6fe1a660: what is 15 to the power of 2"), containsString("225"));
+//    }
 
 
 }

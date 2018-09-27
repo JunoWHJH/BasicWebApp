@@ -121,20 +121,20 @@ public class QueryProcessor {
             return output.toString();
         }
 
-        if (query.toLowerCase().contains("to the power of")) {
-            query = query.substring(query.indexOf(":"));
-//            int total = 1;
-            String numsplit = query.replaceAll("[^0-9]+", ";");
-            numsplit=numsplit.substring(1);
-            String[] array  = numsplit.split(";");
-
-            int result = (int)Math.pow(Integer.valueOf(array[0]), Integer.valueOf(array[1]));
-//            for(String s: array) {
-//                int number = Integer.valueOf(s);
-//                total *= number;
-//            }
-            return Integer.toString(result);
-        }
+//        if (query.toLowerCase().contains("to the power of")) {
+//            query = query.substring(query.indexOf(":"));
+////            int total = 1;
+//            String numsplit = query.replaceAll("[^0-9]+", ";");
+//            numsplit=numsplit.substring(1);
+//            String[] array  = numsplit.split(";");
+//
+//            int result = (int)Math.pow(Integer.valueOf(array[0]), Integer.valueOf(array[1]));
+////            for(String s: array) {
+////                int number = Integer.valueOf(s);
+////                total *= number;
+////            }
+//            return Integer.toString(result);
+//        }
 
         return "";
     }
