@@ -17,6 +17,10 @@ public class QueryProcessor {
             return "2016";
         }
 
+        if (query.toLowerCase().contains("eiffel tower")) {
+            return "Paris";
+        }
+
         if (query.toLowerCase().contains("what is your name")) {
             return "Jigsaw";
         }
